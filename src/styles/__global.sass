@@ -1,0 +1,42 @@
+@import '@variables'
+
+:root
+    --header-height: 90px
+
+html
+    scroll-behavior: smooth
+
+body
+    background-color: $dbg
+    overflow-x: hidden
+    @media screen and ( max-width: 500px )
+        padding-bottom: 60px
+
+::-webkit-scrollbar
+    width: 5px
+
+::-webkit-scrollbar-track
+    background: transparent
+    padding: 0 2px
+
+::-webkit-scrollbar-thumb
+    background: rgba(145, 145, 145, 0.2)
+    border-radius: 8px
+    border-radius: 3px solid rgba(145, 145, 145, 0.2)
+
+section
+    width: 100vw
+    padding: 170px 5vw 100px
+    position: relative
+    background-color: $lbg
+    &:nth-child(even)
+        background: $dbg
+    @media screen and ( max-width: 1000px )
+        padding: 120px 5vw 60px
+
+.subtitle
+    font-size: 20px
+    line-height: 28px
+    color: $fc
+    margin-bottom: 48px
+    text-align: center

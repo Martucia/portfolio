@@ -1,0 +1,33 @@
+@import '@variables'
+
+.subtitle
+    font-size: 20px
+    line-height: 28px
+    color: $fc
+    margin-bottom: 48px
+    text-align: center
+
+.wrapper
+    display: grid
+    gap: 90px
+    grid-template-columns: repeat(auto-fill, 65px)
+    justify-content: space-between
+    @media screen and ( max-width: 1000px )
+        padding: 0 30px
+    @media screen and ( max-width: 500px )
+        grid-template-columns: repeat(auto-fill, 45px)
+        gap: 56px
+
+.skill
+    display: flex
+    flex-direction: column
+    gap: 8px
+    align-items: center
+    img
+        height: 64px
+        @media screen and ( max-width: 500px )
+            height: 45px
+    span
+        font-size: 18px
+        line-height: 28px
+        color: $fc

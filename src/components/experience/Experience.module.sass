@@ -1,0 +1,81 @@
+@import '@variables'
+
+.subtitle
+    font-size: 20px
+    line-height: 28px
+    color: $fc
+    margin-bottom: 48px
+    text-align: center
+
+.wrapper
+    display: flex
+    flex-direction: column
+    gap: 48px
+    max-width: 1000px
+    margin: 0 auto
+
+.block
+    width: 100%
+    display: grid
+    grid-template-columns: 1fr 2fr 1fr
+    gap: 12px
+    border-radius: 12px
+    background: #1F2937
+    box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.15)
+    padding: 32px
+    grid-template-areas: "image content duration"
+    @media screen and ( max-width: 750px )
+        grid-template-areas: "image" "duration" "content"
+        grid-template-columns: 1fr
+        gap: 16px
+
+.image
+    width: max-content
+    background: #fff
+    height: max-content
+    border-radius: 10px
+    max-width: 100%
+    grid-area: image
+    padding: 0 12px
+
+.logo
+    // height: 100px
+    max-width: 100%
+
+.content
+    grid-area: content
+
+.title
+    color: $lfc
+    font-size: 20px
+    font-weight: 600
+    line-height: 28px
+
+.list
+    display: flex
+    flex-direction: column
+    gap: 8px
+    font-size: 16px
+    margin-top: 1em
+    li
+        color: $fc
+        font-size: inherit
+        line-height: 24px
+        list-style: inside
+        font-weight: 300
+
+.text
+    color: $fc
+    font-size: inherit
+    line-height: 24px
+    list-style: inside
+    font-weight: 300
+    margin-top: 1em
+
+.duration
+    text-align: right
+    color: #E5E7EB
+    font-weight: 600
+    grid-area: duration
+    @media screen and ( max-width: 750px )
+        text-align-last: left

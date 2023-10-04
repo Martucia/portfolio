@@ -1,0 +1,106 @@
+@import '@variables'
+
+.subtitle
+    font-size: 20px
+    line-height: 28px
+    color: $fc
+    margin-bottom: 48px
+    text-align: center
+
+.wrapper
+    display: grid
+    grid-template-columns: 1fr
+    gap: 48px
+
+.project
+    width: 100%
+    border-radius: 12px
+    display: grid
+    grid-template-columns: 1fr 1fr
+    background-color: $lb
+    grid-template-areas: "image content"
+    &:nth-child(even)
+        grid-template-areas: "content image"
+    @media screen and ( max-width: 1000px )
+        grid-template-columns: 1fr
+        grid-template-areas: "image" "content"
+        &:nth-child(even)
+            grid-template-areas: "image" "content"
+
+.image
+    padding: 48px
+    grid-area: image
+    width: 100%
+    min-width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    @media screen and ( max-width: 500px )
+        padding: 32px
+
+.link
+    width: 100%
+    height: 100%
+    border-radius: 12px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    // height: 380px
+    max-height: 400px
+    img
+        // width: 100%
+        height: 100%
+        @media screen and ( max-width: 1000px )
+            height: auto
+            width: 100%
+
+.content
+    background-color: $lbg
+    padding: 48px
+    grid-area: content
+    width: 100%
+    @media screen and ( max-width: 500px )
+        padding: 32px
+
+.title
+    color: $lfc
+    font-size: 20px
+    font-weight: 600
+    line-height: 28px
+
+.desc
+    font-size: 16px
+    line-height: 24px
+    margin: 1.5em 0
+    color: $fc
+
+.tags
+    // display: inline-flex
+    // gap: 8px
+
+.tag
+    padding: 4px 20px
+    background-color: $lb
+    border-radius: 12px
+    font-size: 14px
+    font-weight: 500
+    line-height: 20px
+    color: $fc
+    display: inline-flex
+    margin-right: 8px
+    margin-bottom: 8px
+
+.links
+    margin-top: 32px
+    a
+        display: flex
+        align-items: center
+        gap: 8px
+        color: $fc
+        transition: 0.3s
+        &:hover
+            color: $lfc
+        img
+            width: 24px
+            height: 24px

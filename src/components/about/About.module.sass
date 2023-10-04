@@ -1,0 +1,50 @@
+@import '@variables'
+
+.about
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: 30px
+    @media screen and ( max-width: 1000px )
+        grid-template-columns: 1fr
+        gap: 60px
+
+.image
+    display: flex
+    justify-content: center
+    position: relative
+    height: max-content
+    img
+        width: 400px
+        z-index: 2
+        @media screen and ( max-width: 1000px )
+            width: 340px
+        @media screen and ( max-width: 500px )
+            width: 280px
+    &::before
+        content: ''
+        width: 400px
+        height: 100%
+        position: absolute
+        top: 40px
+        right: 50%
+        transform: translate(calc(50% - 40px), 0)
+        background: $lb
+        @media screen and ( max-width: 1000px )
+            width: 340px
+            transform: translate(calc(50% - 20px), 0)
+            top: 20px
+        @media screen and ( max-width: 500px )
+            width: 280px
+
+.title
+    font-size: 30px
+    font-weight: 600
+    line-height: 36px
+    margin-bottom: 8px
+    color: $lfc
+
+.text
+    font-size: 16px
+    line-height: 24px
+    margin-top: 24px
+    color: $fc
